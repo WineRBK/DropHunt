@@ -1,0 +1,17 @@
+.app {
+    display: flex;
+    flex-direction: column;
+
+    box-sizing: border-box;
+    width: 100%;
+    min-height: 100vh;
+
+    color: var(--white);
+    
+    background-color: var(--black);
+    
+    * {
+        box-sizing: border-box;
+        font-family: var(--font-family);
+    }
+}

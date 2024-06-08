@@ -1,0 +1,37 @@
+.card {
+    cursor: pointer;
+
+    transform: scale(0.8);
+
+    width: 322px;
+    height: 322px;
+    padding: 20px;
+    padding-top: 45px;
+
+    text-align: center;
+
+    background-color: var(--dark-grey);
+    border-radius: 10px;
+
+    transition: .3s;
+
+    &__img {
+        img {
+            margin: 0 auto;
+            margin-bottom: 24px;
+        }
+    }
+
+    &__title {
+        margin-bottom: 24px;
+        font-size: 20px;
+        font-weight: 600;
+    }
+
+    &__description {
+        font-size: 14px;
+        font-weight: lighter;
+        line-height: 120%;
+        color: var(--grey);
+    }
+}
