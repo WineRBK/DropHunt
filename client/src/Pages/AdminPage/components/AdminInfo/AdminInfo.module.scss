@@ -1,0 +1,75 @@
+.info {
+    display: flex;
+    gap: 30px;
+
+    width: 100%;
+    max-width: 761px;
+    padding: 10px;
+
+    &__empty {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    &__logo {
+        width: 100%;
+        max-width: 60px;
+
+        svg {
+            width: 60px;
+        height: 60px;
+        }
+    }
+
+    &__nameWrapper {
+        display: flex;
+        gap: 5px;
+        margin-bottom: 20px;
+    }
+
+    &__name {
+        font-size: 18px;
+    }
+
+    &__links {
+        ul {
+            display: flex;
+        gap: 11px;
+        }
+    }
+
+    &__col1 {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__col2 {
+        display: flex;
+        flex-direction: column;
+
+        min-width: 80px;
+
+        font-size: 14px;
+        font-weight: bold;
+    }
+
+    &__total {
+        margin-bottom: 11px;
+    }
+
+    &__col3 {
+        display: flex;
+        flex-direction: column;
+        opacity: 0.7;
+    }
+
+    &__totalPrice {
+        margin-bottom: 11px;
+    }
+
+    &__twitterName {
+        display: block;
+        margin-bottom: 16px;
+    }
+}

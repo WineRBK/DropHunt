@@ -1,0 +1,18 @@
+.category {
+    display: flex;
+    gap: 5px;
+    align-items: center;
+
+
+    font-size: 12px;
+
+    svg {
+        width: 6px;
+        height: 6px;
+    }
+
+    span {
+        color: var(--white);
+        opacity: .7;
+    }
+}

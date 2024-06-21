@@ -1,0 +1,31 @@
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+
+    margin: 0;
+    padding: 0;
+
+    
+    input {
+        margin-bottom: 7px;
+        padding: 6px;
+
+        color: var(--white);
+
+        background-color: var(--border);
+        border: none;
+        border: 1px solid var(--border);
+        border-radius: 5px;
+
+        &::placeholder {
+            font-family: var(--font-family);
+            font-size: 16px;
+            color: var(--grey);
+          }
+    }
+
+    label {
+        font-size: 20px;
+    }
+}

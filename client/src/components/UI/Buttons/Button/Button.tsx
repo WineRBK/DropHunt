@@ -7,19 +7,23 @@ interface ButtonProps {
   className?: string;
   position?: string;
   color?: 'primary' | 'normal';
+  onClick: () => {};
 }
 
 const Button: FC<ButtonProps> = ({
   text = 'О нас',
   className = '',
-  position = 'normal',
+  position = 'normal' || 'header' || 'admin',
   color = 'normal',
+  onClick,
 }) => {
   return (
     <button
       type="button"
+      onClick={onClick}
       className={cn(s.button, className, {
-        [s.header]: position === 'header',
+        // [s.header]: position === 'header',
+        [s.admin]: position === 'admin',
         [s.normal]: position === 'normal',
         [s.primary]: color === 'primary',
       })}>

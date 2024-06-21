@@ -1,0 +1,161 @@
+.dropdown {
+position: relative;
+z-index: 10;
+
+    display: flex;
+    align-items: center;
+
+    width: 100%;
+    min-height: 46px;
+    padding: 10px;
+
+    background-color: var(--background);
+    border: 1px solid var(--grey);
+    border-radius: 3px;
+
+    transition: .3s;
+
+    &:hover {
+        border-color: var(--blue);
+    }
+
+    &:active {
+        border-color: var(--blue-active);
+    }
+
+
+    &__name {
+        margin-right: 6px;
+        font-size: 18px;
+    }
+
+    &__arrow {
+        display: flex;
+        margin-right: 30px;
+        
+        svg {
+            transform: rotate(180deg);
+
+            width: 7px;
+            height: 5px;
+            margin: auto 0;
+
+            transition: .3s;
+        }
+    }
+
+    &__value {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        width: 24px;
+        height: 24px;
+
+        font-size: 14px;
+        font-weight: bold;
+        color: var(--blue);
+        text-align: center;
+
+        border: 2px solid var(--blue);
+        border-radius: 100%;
+    }
+
+    &__tier {
+        display: flex;
+        justify-content: end;
+
+        width: 18px;
+
+        font-size: 16px;
+        font-weight: bold;
+        color: var(--red);
+    }
+
+    &__status {
+        display: flex;
+        justify-content: end;
+        width: 130px;
+
+    }
+
+    &__wrapper {
+        cursor: pointer;
+        position: relative;
+    }
+    
+    &__content {
+        pointer-events: none;
+
+        position: absolute;
+        z-index: 9;
+        top: 44px;
+
+        overflow: hidden;
+
+        width: 100%;
+        max-height: 0;
+
+        // opacity: 0;
+
+        transition: max-height 0.3s ease, opacity 0.3s ease;
+
+
+        ul {
+        display: flex;
+        flex-direction: column;
+        background-color: var(--background);
+
+        li {
+            padding: 4px 10px;
+
+            &:first-child {
+                padding-top: 6px;
+            }
+
+            &:hover {
+                background-color: var(--black);
+            }
+        }
+        }
+    }
+    
+}
+
+.active {
+    border-color: var(--blue);
+
+    svg {
+        transform: rotate(0deg);
+    }
+}
+
+.activeContent {
+        pointer-events: auto;
+        max-height: 100px; /* Подходящее значение для вашего контента */
+        opacity: 1;
+      
+}
+
+.hidden {
+    opacity: 0;
+}
+
+.activeItem {
+    color: var(--blue);
+}
+
+.green {
+    font-weight: bold;
+    color: var(--green);
+}
+
+.orange {
+    font-weight: bold;
+    color: var(--orange);
+}
+
+.red {
+    font-weight: bold;
+    color: var(--red);
+}
