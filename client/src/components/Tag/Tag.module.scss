@@ -1,0 +1,20 @@
+.tag {
+    display: flex;
+    gap: 5px;
+    align-items: center;
+    justify-content: center;
+
+    width: fit-content;
+    padding: 4px 6px;
+
+    font-size: 18px;
+    font-weight: 500;
+    color: var(--light-grey);
+
+    background-color: var(--border);
+    border-radius: 5px;
+
+    span {
+        height: 19px;
+    }
+}

@@ -3,7 +3,8 @@ import { Link } from 'react-router-dom';
 import s from './Header.module.scss';
 import LogoIcon from '../../images/svg/LogoIcon/LogoIcon';
 import ContainerContent from '../../components/ContainerContent/ContainerContent';
-import Button from '../../components/UI/Button/Button';
+import Button from '../../components/UI/Buttons/Button/Button';
+import LinkHeader from '../../components/UI/Buttons/Link/LinkHeader';
 
 const Header = () => {
   return (
@@ -11,23 +12,28 @@ const Header = () => {
       <ContainerContent>
         <nav className={s.header__nav}>
           <div className={s.header__block}>
-            <LogoIcon />
+            <Link to="/">
+              <LogoIcon />
+            </Link>
           </div>
           <div className={s.header__block}>
             <ul>
               <li>
-                <Link to="/">Главная</Link>
+                <LinkHeader to="/">Main</LinkHeader>
               </li>
               <li>
-                <Link to="/">Проекты</Link>
+                <LinkHeader to="/startups">Проекты</LinkHeader>
               </li>
               <li>
-                <Link to="/">О нас</Link>
+                <LinkHeader to="/">О нас</LinkHeader>
+              </li>
+              <li>
+                <LinkHeader to="/admin">Админ</LinkHeader>
               </li>
             </ul>
           </div>
           <div className={s.header__block}>
-            <Button text="Log In" position="header" />
+            <Button text="Log In" position="normal" />
           </div>
         </nav>
       </ContainerContent>

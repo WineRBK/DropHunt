@@ -1,6 +1,6 @@
 .header {
     height: 66px;
-    background-color: var(--dark-grey);
+    background-color: var(--black);
     
     &__nav {
         display: flex;
@@ -25,10 +25,5 @@
     ul {
         display: flex;
         gap: 25px;
-    }
-
-    a {
-        font-size: 18px;
-        color: var(--light-grey);
     }
 }

@@ -1,0 +1,32 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model Web {
+  id   Int    @id @default(autoincrement())
+  name String
+}
+
+model Startup {
+  id           Int      @id(map: "Projects_pkey") @default(autoincrement())
+  name         String
+  category     String
+  image        Json
+  links        Json
+  raise        Float
+  valuation    Float
+  investors    Json
+  twitterScore Float
+  webs         Json
+  tier         String
+  status       String
+  actions      String[]
+  estimated    Int
+  deadline     DateTime
+  content      String
+}
