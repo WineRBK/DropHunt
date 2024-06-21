@@ -1,0 +1,16 @@
+.editor {
+    width: 100%;
+    max-width: 1280px; /* или любая фиксированная ширина */
+    height: auto;
+    margin: 0 auto; 
+    
+  }
+  
+  .editor .ql-container {
+    height: auto;
+    min-height: 500px;
+    word-wrap: break-word; /* позволяет переносить длинные слова */
+    overflow-wrap: break-word; /* позволяет переносить длинные слова */
+  }
+  
+  

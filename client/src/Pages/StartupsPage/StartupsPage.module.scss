@@ -1,0 +1,30 @@
+.startups {
+    padding-top: 20px;
+
+    &__list {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    &__wrapper {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__title {
+        margin-bottom: 17px;
+    }
+
+    &__subtitle {
+        margin-bottom: 47px;
+    }
+
+    &__dropdownsWrapper {
+        display: flex;
+        gap: 30px;
+        margin-bottom: 47px;
+    }
+
+}
+

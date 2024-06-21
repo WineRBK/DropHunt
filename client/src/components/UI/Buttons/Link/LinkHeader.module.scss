@@ -1,0 +1,17 @@
+.link {
+    font-size: 18px;
+    font-weight: 300;
+    color: var(--light-grey);
+    transition: .3s;
+    
+    &:hover {
+        font-weight: 500;
+        color: var(--blue-hover);
+    }
+
+    &:active {
+        color: var(--blue-hover);
+        text-decoration: underline;
+    }
+
+}

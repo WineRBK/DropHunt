@@ -2,7 +2,7 @@ import React from 'react';
 import Card from '../../components/Card/Card';
 import ContainerContent from '../../components/ContainerContent/ContainerContent';
 import FocusOnSelect from '../../components/Slider/Slider';
-import Button from '../../components/UI/Button/Button';
+import Button from '../../components/UI/Buttons/Button/Button';
 import H1 from '../../components/UI/Titles/H1/H1';
 import H2 from '../../components/UI/Titles/H2/H2';
 import Regular from '../../components/UI/Titles/Regular/Regular';

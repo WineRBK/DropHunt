@@ -349,3 +349,29 @@
   [hidden] {
     display: none;
   }
+
+  input,
+  textarea {
+      background-color: transparent;
+      border: none;
+      outline: none;
+  }
+  
+  fieldset {
+      border: none;
+  }
+  
+  textarea {
+      resize: none;
+      overflow: auto;
+  }
+  
+  textarea:hover {
+      resize: none;
+      overflow: auto;
+  }
+  
+  textarea::-webkit-scrollbar {
+      width: 0;
+      height: 0;
+  }

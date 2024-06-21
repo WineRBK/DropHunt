@@ -1,0 +1,53 @@
+.button {
+    font-size: 20px;
+    line-height: 100%;
+    color: var(--blue);
+
+    border: 1px solid var(--grey);
+    border-color: var(--blue);
+    border-radius: 3px;
+
+    transition: .3s;
+
+    &:hover {
+        color: var(--blue-hover);
+        border-color: var(--blue-hover);
+    }
+
+    &:active {
+        color: var(--blue-active);
+        border-color: var(--blue-active);
+    }
+}
+
+// .header {
+//     width: 126px;
+//     height: 39px;
+//     padding-top: 0;
+//     padding-bottom: 0;
+// }
+
+.normal {
+    height: 53px;
+    padding: 14px 16px;
+}
+
+.primary {
+    color: var(--white);
+    background-color: var(--blue);
+
+    &:hover {
+        color: var(--white);
+        background-color: var(--blue-hover);
+    }
+
+    &:active {
+        color: var(--white);
+        background-color: var(--blue-active);
+    }
+}
+
+.admin {
+    height: 25px;
+    font-size: 18px;
+}
