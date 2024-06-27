@@ -1433,6 +1433,9 @@
 .j02wJ1Jn {
   width: 100%;
 }
+.JuXlUt41 {
+  width: 100%;
+}
 .kQ3OV8wY {
   display: flex;
   gap: 20px;
@@ -1495,62 +1498,6 @@
   border: 3px solid var(--border);
   border-radius: 5px;
 }
-/*!*************************************************************************************************************************************************************************************!*\
-  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[3].use[1]!./node_modules/sass-loader/dist/cjs.js!./src/Pages/AdminPage/components/AdminInfo/AdminInfo.module.scss ***!
-  \*************************************************************************************************************************************************************************************/
-.W1lUeWpO {
-  display: flex;
-  gap: 30px;
-  width: 100%;
-  max-width: 761px;
-  padding: 10px;
-}
-.npTccdL5 {
-  width: 100%;
-  max-width: 60px;
-}
-.npTccdL5 svg {
-  width: 60px;
-  height: 60px;
-}
-.V0ju6NCs {
-  display: flex;
-  gap: 5px;
-  margin-bottom: 20px;
-}
-.OblEsjFV {
-  font-size: 18px;
-}
-.UylLX7YO ul {
-  display: flex;
-  gap: 11px;
-}
-.TCaiGCVI {
-  display: flex;
-  flex-direction: column;
-}
-.g2A6CIW1 {
-  display: flex;
-  flex-direction: column;
-  min-width: 80px;
-  font-size: 14px;
-  font-weight: bold;
-}
-.PEt5Zwc0 {
-  margin-bottom: 11px;
-}
-.hiqjpHqi {
-  display: flex;
-  flex-direction: column;
-  opacity: 0.7;
-}
-.NX8NI3O8 {
-  margin-bottom: 11px;
-}
-.rJFuySQ1 {
-  display: block;
-  margin-bottom: 16px;
-}
 /*!*******************************************************************************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[3].use[1]!./node_modules/sass-loader/dist/cjs.js!./src/images/svg/LinkIcon/LinkIcon.module.scss ***!
   \*******************************************************************************************************************************************************************/
@@ -1611,6 +1558,67 @@
   font-weight: bold;
   color: #fff;
   opacity: 0.7;
+}
+/*!*************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[3].use[1]!./node_modules/sass-loader/dist/cjs.js!./src/Pages/AdminPage/components/AdminInfo/AdminInfo.module.scss ***!
+  \*************************************************************************************************************************************************************************************/
+.W1lUeWpO {
+  display: flex;
+  gap: 30px;
+  width: 100%;
+  max-width: 761px;
+  padding: 10px;
+}
+.KqZmRbKV {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.npTccdL5 {
+  width: 100%;
+  max-width: 60px;
+}
+.npTccdL5 svg {
+  width: 60px;
+  height: 60px;
+}
+.V0ju6NCs {
+  display: flex;
+  gap: 5px;
+  margin-bottom: 20px;
+}
+.OblEsjFV {
+  font-size: 18px;
+}
+.UylLX7YO ul {
+  display: flex;
+  gap: 11px;
+}
+.TCaiGCVI {
+  display: flex;
+  flex-direction: column;
+}
+.g2A6CIW1 {
+  display: flex;
+  flex-direction: column;
+  min-width: 80px;
+  font-size: 14px;
+  font-weight: bold;
+}
+.PEt5Zwc0 {
+  margin-bottom: 11px;
+}
+.hiqjpHqi {
+  display: flex;
+  flex-direction: column;
+  opacity: 0.7;
+}
+.NX8NI3O8 {
+  margin-bottom: 11px;
+}
+.rJFuySQ1 {
+  display: block;
+  margin-bottom: 16px;
 }
 /*!***********************************************************************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[3].use[1]!./node_modules/sass-loader/dist/cjs.js!./src/components/Card/Card.module.scss ***!
