@@ -12,7 +12,7 @@ import H3 from '../../components/UI/Titles/H3/H3';
 import useFullDataPost from '../../hooks/useFullDataPost';
 import useStartupState from '../../hooks/useStartupState';
 import s from './AdminPage.module.scss';
-import AdminInfo from './components/AdminInfo/AdminInfo';
+import AdminInfo from '../../components/AdminInfo/AdminInfo';
 
 const AdminPage = () => {
   const {

@@ -1,14 +1,15 @@
-import React, { FC } from 'react';
 import cn from 'classnames';
+import React, { FC, useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
-import img from '../../../../images/logo.png';
-import LinkIcon from '../../../../images/svg/LinkIcon/LinkIcon';
-import { InfoProps } from '../../../../types/Info.props';
+import img from '../../images/logo.png';
+import LinkIcon from '../../images/svg/LinkIcon/LinkIcon';
+import { InfoProps } from '../../types/Info.props';
+import { dayLeft, formatDate, formatNumber } from '../../utils/formatUtils';
+import { sortLinks } from '../../utils/sortLinks';
 import AdminCategory from '../AdminCategory/AdminCategory';
 import TwitterScore from '../TwitterScore/TwitterScore';
 import s from './AdminInfo.module.scss';
 import NetworkActionTerms from './NetworkActionTerms';
-import { formatNumber, formatDate, dayLeft } from '../../../../utils/formatUtils';
 
 type StatusProps = 'Подтвержденный' | 'Потенциальный' | 'Закончился';
 
@@ -40,7 +41,7 @@ const AdminInfo: FC<AdminInfoProps> = ({
   name,
   image,
   category,
-  links,
+  links = [],
   valuation,
   raise,
   status,
@@ -53,6 +54,15 @@ const AdminInfo: FC<AdminInfoProps> = ({
   big = false,
   className = '',
 }) => {
+  const [sortedLinks, setSortedLinks] = useState([]);
+
+  useEffect(() => {
+    if (links.length > 0) {
+      console.log(links);
+      setSortedLinks(sortLinks(links));
+    }
+  }, [links]);
+
   return (
     <>
       <div
@@ -67,7 +77,7 @@ const AdminInfo: FC<AdminInfoProps> = ({
           )}
           <div className={cn(s.info__tier, tierClassMap[tier])}>{tier}</div>
         </div>
-        <div className={s.col}>
+        <div className={cn(s.col, s.col1)}>
           <div className={s.info__titles}>
             <div className={s.info__nameWrapper}>
               <span
@@ -85,12 +95,12 @@ const AdminInfo: FC<AdminInfoProps> = ({
           {!big && (
             <div className={s.info__links}>
               <ul>
-                {links ? (
-                  links.map((link) => (
+                {sortedLinks && sortedLinks.length > 0 ? (
+                  sortedLinks.map((link) => (
                     <li key={link.type}>
-                      <Link to={link.value}>
+                      <a href={link.value} target="_blank" rel="noopener noreferrer">
                         <LinkIcon platform={link.type} />
-                      </Link>
+                      </a>
                     </li>
                   ))
                 ) : (
@@ -143,18 +153,18 @@ const AdminInfo: FC<AdminInfoProps> = ({
         {big && (
           <div className={s.info__links}>
             <ul>
-              {links ? (
-                links.map((link) => (
+              {sortedLinks && sortedLinks.length > 0 ? (
+                sortedLinks.map((link) => (
                   <li key={link.type}>
-                    <Link to={link.value}>
+                    <a href={link.value} target="_blank" rel="noopener noreferrer">
                       <LinkIcon platform={link.type} />
-                    </Link>
+                    </a>
                   </li>
                 ))
               ) : (
                 <>
                   <li>
-                    <Link to="#">
+                    <Link to="#" target="_blank">
                       <LinkIcon platform="web" />
                     </Link>
                   </li>

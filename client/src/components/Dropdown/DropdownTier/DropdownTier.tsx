@@ -17,8 +17,15 @@ const DropdownTier: FC<DropdownTierProps> = ({ handleTier }) => {
       options={tier}
       selected={activeTier}
       onSelect={(selected) => {
-        setActiveTier(selected as string);
-        handleTier(selected as string);
+        if (activeTier === selected) {
+          // Если текущий tier совпадает с выбранным, сбрасываем его
+          setActiveTier(null);
+          handleTier(null);
+        } else {
+          // Иначе устанавливаем новый tier
+          setActiveTier(selected as string);
+          handleTier(selected as string);
+        }
       }}
     />
   );

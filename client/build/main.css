@@ -1554,32 +1554,32 @@
 .I8suhtTu svg {
   margin-left: -1px;
 }
-/*!*********************************************************************************************************************************************************************************************!*\
-  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[3].use[1]!./node_modules/sass-loader/dist/cjs.js!./src/Pages/AdminPage/components/AdminCategory/AdminCategory.module.scss ***!
-  \*********************************************************************************************************************************************************************************************/
-.scKJ76g1 {
+/*!*****************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[3].use[1]!./node_modules/sass-loader/dist/cjs.js!./src/components/AdminCategory/AdminCategory.module.scss ***!
+  \*****************************************************************************************************************************************************************************/
+.xCKaOFT1 {
   display: flex;
   gap: 5px;
   align-items: center;
   font-size: 12px;
 }
-.scKJ76g1 svg {
+.xCKaOFT1 svg {
   width: 6px;
   height: 6px;
 }
-.scKJ76g1 span {
+.xCKaOFT1 span {
   color: var(--white);
   opacity: 0.7;
 }
-/*!*******************************************************************************************************************************************************************************************!*\
-  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[3].use[1]!./node_modules/sass-loader/dist/cjs.js!./src/Pages/AdminPage/components/TwitterScore/TwitterScore.module.scss ***!
-  \*******************************************************************************************************************************************************************************************/
-.P5TAZMJK {
+/*!***************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[3].use[1]!./node_modules/sass-loader/dist/cjs.js!./src/components/TwitterScore/TwitterScore.module.scss ***!
+  \***************************************************************************************************************************************************************************/
+.jByvXASA {
   position: relative;
   width: 100%;
   max-width: 120px;
 }
-.Bjjf00mQ {
+.J8ytUbPI {
   position: absolute;
   top: -2px;
   display: flex;
@@ -1590,7 +1590,7 @@
   border-radius: 50%;
   box-shadow: 0 4px 7px 0 #000;
 }
-.F6aFx1kr {
+.ckFPQ9Mz {
   display: flex;
   width: fit-content;
   font-size: 11px;
@@ -1598,10 +1598,10 @@
   color: #fff;
   opacity: 0.7;
 }
-/*!*************************************************************************************************************************************************************************************!*\
-  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[3].use[1]!./node_modules/sass-loader/dist/cjs.js!./src/Pages/AdminPage/components/AdminInfo/AdminInfo.module.scss ***!
-  \*************************************************************************************************************************************************************************************/
-.W1lUeWpO {
+/*!*********************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[3].use[1]!./node_modules/sass-loader/dist/cjs.js!./src/components/AdminInfo/AdminInfo.module.scss ***!
+  \*********************************************************************************************************************************************************************/
+.xSFb6ggY {
   position: relative;
   display: flex;
   gap: 30px;
@@ -1613,12 +1613,12 @@
   background-color: var(--black);
   border-radius: 10px;
 }
-.KqZmRbKV {
+.NrkAa2re {
   display: flex;
   align-items: center;
   justify-content: center;
 }
-.I4NeJMJH {
+.tDqOmUTX {
   position: absolute;
   bottom: 4px;
   left: 0;
@@ -1631,73 +1631,73 @@
   background-color: var(--green);
   border-radius: 5px;
 }
-.lxfGSXq6 {
+.d8zLbRyq {
   margin-right: 4px;
   padding: 4px 7px;
   font-weight: bold;
   border-radius: 5px;
 }
-.npTccdL5 {
+.m1GEB6Jw {
   position: relative;
   max-width: 60px;
 }
-.npTccdL5 svg {
+.m1GEB6Jw svg {
   width: 60px;
   height: 60px;
 }
-.V0ju6NCs {
+.udIYKuQG {
   display: flex;
   flex: 2;
   gap: 5px;
   align-items: center;
 }
-.OblEsjFV {
+.eXExx3dB {
   font-size: 18px;
 }
-.UylLX7YO {
+.CcLwpdIl {
   display: flex;
   align-items: center;
 }
-.UylLX7YO ul {
+.CcLwpdIl ul {
   display: flex;
   gap: 11px;
 }
-.fsvGRVW_ {
+.OF3zzeXJ {
   display: flex;
   flex-direction: column;
   gap: 15px;
 }
-.mJvAucjb, .CMZsv7x1 {
+.wfQi9jzY, .bpNBPgva {
   display: flex;
   gap: 20px;
   align-items: center;
 }
-.PEt5Zwc0, .k7_fjwTv {
+.fnkInAmQ, .w__AD3qY {
   min-width: 200px;
 }
-.rJFuySQ1 {
+.LMUoR9T8 {
   margin-left: 18px;
 }
-.Vjwfn9EI {
+._0J0Kbj66 {
   display: flex;
   justify-content: center;
   margin-bottom: 11px;
 }
-.JPivwdyq {
+.hKXrUnE7 {
   display: flex;
   flex-flow: column nowrap;
 }
-.JPivwdyq span {
+.hKXrUnE7 span {
   display: flex;
   flex: 2;
   justify-content: center;
 }
-.JPivwdyq span:last-child {
+.hKXrUnE7 span:last-child {
   display: block;
   width: 100%;
   font-size: 14px;
 }
-.xt0aM2XT {
+.qc4ZRZqA {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -1706,35 +1706,39 @@
   background-color: var(--black);
   border-radius: 10px;
 }
-.CAqJ7mhI, .VAhJpUAD {
+.WQJ9Mxmh, .GzWAL2tf {
   display: flex;
   gap: 10px;
   align-items: center;
 }
 
-.JHkv3_t8 {
+.CBIX0sQY {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 }
 
-.y4nLJAlw {
+.vMySvJZm {
+  min-width: 270px;
+}
+
+.fNg5K26m {
   background-color: var(--green);
 }
 
-.aXlIuYpf {
+.fWLMv1Eq {
   background-color: var(--orange);
 }
 
-.SVGpE1t2 {
+.dunfWau9 {
   background-color: var(--red);
 }
 
-.N5PvjRe1 {
+.EZJWycfs {
   background-color: var(--grey);
 }
 
-.bS7LXAHs {
+.k3e6cQlh {
   max-width: 100%;
 }
 /*!*****************************************************************************************************************************************************************!*\
@@ -1952,6 +1956,33 @@
 .apyh6zgj {
   margin-bottom: 50px;
 }
+/*!**********************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[3].use[1]!./node_modules/sass-loader/dist/cjs.js!./src/Pages/StartupsPage/StartupsPage.module.scss ***!
+  \**********************************************************************************************************************************************************************/
+.xUMsJHvV {
+  padding-top: 20px;
+  padding-bottom: 90px;
+}
+.BSqC3mUm {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.d141nAXT {
+  display: flex;
+  flex-direction: column;
+}
+.s4k7k4L2 {
+  margin-bottom: 17px;
+}
+.kzXZGbZi {
+  margin-bottom: 47px;
+}
+.tsEQ1OAM {
+  display: flex;
+  gap: 30px;
+  margin-bottom: 47px;
+}
 /*!***********************************************************************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[3].use[1]!./node_modules/sass-loader/dist/cjs.js!./src/Layout/Footer/Footer.module.scss ***!
   \***********************************************************************************************************************************************************/
@@ -2050,32 +2081,6 @@
 .WTDMuaNp * {
   box-sizing: border-box;
   font-family: var(--font-family);
-}
-/*!**********************************************************************************************************************************************************************!*\
-  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[3].use[1]!./node_modules/sass-loader/dist/cjs.js!./src/Pages/StartupsPage/StartupsPage.module.scss ***!
-  \**********************************************************************************************************************************************************************/
-.xUMsJHvV {
-  padding-top: 20px;
-}
-.BSqC3mUm {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-}
-.d141nAXT {
-  display: flex;
-  flex-direction: column;
-}
-.s4k7k4L2 {
-  margin-bottom: 17px;
-}
-.kzXZGbZi {
-  margin-bottom: 47px;
-}
-.tsEQ1OAM {
-  display: flex;
-  gap: 30px;
-  margin-bottom: 47px;
 }
 /*!********************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[3].use[1]!./src/styles/normalize.css ***!

@@ -19,9 +19,17 @@ const DropdownStatus: FC<DropdownStatusProps> = ({ handleStatus }) => {
       options={statusList}
       selected={status || ''}
       onSelect={(selected) => {
-        setStatus(selected as StatusProps);
-        handleStatus(selected as StatusProps);
+        if (status === selected) {
+          // Если текущий статус совпадает с выбранным, сбрасываем его
+          setStatus(null);
+          handleStatus(null);
+        } else {
+          // Иначе устанавливаем новый статус
+          setStatus(selected as StatusProps);
+          handleStatus(selected as StatusProps);
+        }
       }}
+
       status
     />
   );

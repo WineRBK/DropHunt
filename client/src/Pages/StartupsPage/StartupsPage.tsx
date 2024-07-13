@@ -1,14 +1,16 @@
 import React, { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 import { getAllStartups } from '../../api/startupApi';
+import AdminInfo from '../../components/AdminInfo/AdminInfo';
 import ContainerContent from '../../components/ContainerContent/ContainerContent';
+import DropdownAction from '../../components/Dropdown/DropdownAction/DropdownAction';
+import DropdownStatus from '../../components/Dropdown/DropdownStatus/DropdownStatus';
+import DropdownTier from '../../components/Dropdown/DropdownTier/DropdownTier';
+import DropdownWeb from '../../components/Dropdown/DropdownWeb/DropdownWeb';
 import H1 from '../../components/UI/Titles/H1/H1';
 import Regular from '../../components/UI/Titles/Regular/Regular';
-import AdminInfo from '../AdminPage/components/AdminInfo/AdminInfo';
 import s from './StartupsPage.module.scss';
-import DropdownWeb from '../../components/Dropdown/DropdownWeb/DropdownWeb';
-import DropdownTier from '../../components/Dropdown/DropdownTier/DropdownTier';
-import DropdownStatus from '../../components/Dropdown/DropdownStatus/DropdownStatus';
-import DropdownAction from '../../components/Dropdown/DropdownAction/DropdownAction';
+import { stringToDate } from '../../utils/formatUtils';
 
 type StatusProps = 'Подтвержденный' | 'Потенциальный' | 'Закончился';
 
@@ -36,14 +38,29 @@ interface Startup {
   content: string;
 }
 
+interface FilteredSettings {
+  networks: string[];
+  tier: string;
+  status: string;
+  action: string[];
+}
+
 const StartupsPage = () => {
   const [startups, setStartups] = useState<Startup[]>([]);
+  const [filteredStartups, setFilteredStartups] = useState<Startup[]>([]);
+  const [filteredSettings, setFilteredSettings] = useState<FilteredSettings>({
+    networks: [],
+    tier: '',
+    status: '',
+    action: [],
+  });
 
   useEffect(() => {
     const fetchData = async () => {
       try {
         const allStartups = await getAllStartups();
         setStartups(allStartups);
+        setFilteredStartups(allStartups);
       } catch (error) {
         console.error('Error fetching startups:', error);
         // Обработка ошибки, например, вывод сообщения об ошибке пользователю или запись в лог
@@ -53,10 +70,64 @@ const StartupsPage = () => {
     fetchData();
   }, [getAllStartups]);
 
-  const handleWeb = () => {};
-  const handleTierChange = () => {};
-  const handleStatusChange = () => {};
-  const handleAction = () => {};
+  const handleWeb = (selected: string[]) => {
+    setFilteredSettings({
+      ...filteredSettings,
+      networks: selected,
+    });
+  };
+  const handleTierChange = (selected: string) => {
+    setFilteredSettings({
+      ...filteredSettings,
+      tier: selected,
+    });
+  };
+  const handleStatusChange = (selected: string) => {
+    setFilteredSettings({
+      ...filteredSettings,
+      status: selected,
+    });
+  };
+  const handleAction = (selected: string[]) => {
+    setFilteredSettings({
+      ...filteredSettings,
+      action: selected,
+    });
+  };
+
+  useEffect(() => {
+    console.log(startups);
+  }, [startups]);
+
+  useEffect(() => {
+    const filterStartups = () => {
+      let filtered = startups;
+
+      if (filteredSettings.networks.length > 0) {
+        filtered = filtered.filter((startup) =>
+          filteredSettings.networks.some((network) => startup.webs.includes(network)),
+        );
+      }
+
+      if (filteredSettings.tier) {
+        filtered = filtered.filter((startup) => startup.tier === filteredSettings.tier);
+      }
+
+      if (filteredSettings.status) {
+        filtered = filtered.filter((startup) => startup.status === filteredSettings.status);
+      }
+
+      if (filteredSettings.action.length > 0) {
+        filtered = filtered.filter((startup) =>
+          filteredSettings.action.some((action) => startup.actions.includes(action)),
+        );
+      }
+
+      setFilteredStartups(filtered);
+    };
+
+    filterStartups();
+  }, [filteredSettings, startups]);
 
   return (
     <div className={s.startups}>
@@ -65,7 +136,7 @@ const StartupsPage = () => {
           <H1 className={s.startups__title}>ПРОЕКТЫ</H1>
           <Regular className={s.startups__subtitle}>
             На странице вы найдете список проектов, проводящих аирдропы и ретродропы, с краткими
-            описаниями каждого. Это поможет вам быстро оценить проекты и принять решение о участии. 
+            описаниями каждого. Это поможет вам быстро оценить проекты и принять решение о участии.
             <br />
             <br />
             Более подробную информацию о том, как получить дроп вы найдете на странице проекта.
@@ -77,29 +148,32 @@ const StartupsPage = () => {
             <DropdownAction handleAction={handleAction} />
           </div>
           <ul className={s.startups__list}>
-            {startups.length > 0 &&
-              startups.map((startup) => (
-                <li key={startup.id}>
-                  <AdminInfo
-                    twitterScore={{
-                      score: startup.twitterScore,
-                      followers: 110,
-                    }}
-                    status={startup.status}
-                    estimatedCosts={startup.estimated}
-                    deadline={startup.deadline}
-                    web={startup.web}
-                    action={startup.actions}
-                    name={startup.name}
-                    image={startup.image}
-                    category={startup.category}
-                    links={startup.links}
-                    valuation={startup.valuation}
-                    raise={startup.raise}
-                    investors={startup.investors}
-                    big
-                  />
-                </li>
+            {filteredStartups.length > 0 &&
+              filteredStartups.map((startup) => (
+                <Link key={startup.id} to={`/startup/${startup.id}`}>
+                  <li>
+                    <AdminInfo
+                      twitterScore={{
+                        score: startup.twitterScore,
+                        followers: 110,
+                      }}
+                      status={startup.status}
+                      estimatedCosts={startup.estimated}
+                      deadline={stringToDate(startup.deadline)}
+                      web={startup.webs}
+                      tier={startup.tier}
+                      action={startup.actions}
+                      name={startup.name}
+                      image={startup.image}
+                      category={startup.category}
+                      links={startup.links}
+                      valuation={startup.valuation}
+                      raise={startup.raise}
+                      investors={startup.investors}
+                      big
+                    />
+                  </li>
+                </Link>
               ))}
           </ul>
         </div>

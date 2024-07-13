@@ -1,7 +1,7 @@
 import React, { FC } from 'react';
 import s from './AdminInfo.module.scss';
-import H4 from '../../../../components/UI/Titles/H4/H4';
-import Tag from '../../../../components/Tag/Tag';
+import H4 from '../UI/Titles/H4/H4';
+import Tag from '../Tag/Tag';
 
 interface NetworkActionTermsProps {
   web: string[];

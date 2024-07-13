@@ -2,6 +2,7 @@ import _ from 'lodash';
 import React, { FC, useCallback, useEffect, useState } from 'react';
 import { webFetch } from '../../../api/api';
 import Dropdown from '../Dropdown';
+import { fetchNetworks } from '../../../api/networksApi';
 
 interface DropdownWebProps {
   handleWeb: (item: string[]) => void;
@@ -22,7 +23,7 @@ const DropdownWeb: FC<DropdownWebProps> = ({ handleWeb }) => {
   useEffect(() => {
     const webData = async () => {
       try {
-        const fetchedWebs = await webFetch();
+        const fetchedWebs = await fetchNetworks();
         console.log(fetchedWebs);
         if (fetchedWebs) {
           setContent(fetchedWebs);

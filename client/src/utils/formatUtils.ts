@@ -46,3 +46,16 @@ export const dayLeft = (dateStr: string): string => {
 
   return Math.ceil(diffInMilliseconds / (1000 * 60 * 60 * 24)).toString();
 };
+
+
+export const stringToDate = (dateString) => {
+  const date = new Date(dateString);
+
+  const day = date.getDate().toString().padStart(2, '0');
+  const month = (date.getMonth() + 1).toString().padStart(2, '0'); // Месяцы в JavaScript нумеруются с 0
+  const year = date.getFullYear();
+
+  const formattedDate = `${day}.${month}.${year}`;
+
+  return formattedDate;
+};

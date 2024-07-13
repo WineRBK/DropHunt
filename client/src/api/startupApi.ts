@@ -1,11 +1,11 @@
 // startupApi.ts
 import axios from 'axios';
-import { API_URL } from '../constants/api';
+import { STARTUPS_URL } from '../constants/api';
 
 // Функция для получения всех стартапов
 export const getAllStartups = async () => {
   try {
-    const response = await axios.get(API_URL);
+    const response = await axios.get(STARTUPS_URL);
     return response.data;
   } catch (error) {
     console.error('Error fetching startups:', error);
@@ -16,7 +16,7 @@ export const getAllStartups = async () => {
 // Функция для получения одного стартапа по ID
 export const getStartupById = async (id: number) => {
   try {
-    const response = await axios.get(`${API_URL}/${id}`);
+    const response = await axios.get(`${STARTUPS_URL}/${id}`);
     return response.data;
   } catch (error) {
     console.error(`Error fetching startup with ID ${id}:`, error);
@@ -27,7 +27,7 @@ export const getStartupById = async (id: number) => {
 // Функция для создания нового стартапа
 export const createStartup = async (newStartup: any) => {
   try {
-    const response = await axios.post(API_URL, newStartup);
+    const response = await axios.post(STARTUPS_URL, newStartup);
     return response.data;
   } catch (error) {
     console.error('Error creating startup:', error);
@@ -38,7 +38,7 @@ export const createStartup = async (newStartup: any) => {
 // Функция для обновления стартапа
 export const updateStartup = async (id: number, updatedStartup: any) => {
   try {
-    const response = await axios.patch(`${API_URL}/${id}`, updatedStartup);
+    const response = await axios.patch(`${STARTUPS_URL}/${id}`, updatedStartup);
     return response.data;
   } catch (error) {
     console.error(`Error updating startup with ID ${id}:`, error);
@@ -49,7 +49,7 @@ export const updateStartup = async (id: number, updatedStartup: any) => {
 // Функция для удаления стартапа
 export const deleteStartup = async (id: number) => {
   try {
-    const response = await axios.delete(`${API_URL}/${id}`);
+    const response = await axios.delete(`${STARTUPS_URL}/${id}`);
     return response.data;
   } catch (error) {
     console.error(`Error deleting startup with ID ${id}:`, error);
@@ -76,7 +76,7 @@ export const prepareStartupData = (startupState: any) => {
     status: startupState.statusState,
     actions: startupState.action,
     estimated: startupState.estimatedCosts,
-    deadline: startupState.deadlineText,
+    deadline: date,
     content: startupState.html,
   };
 };
